@@ -13,20 +13,20 @@ public class HelloApplication extends Application {
     static Scene mainScene, triviaScene;
 
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage Stage) throws IOException {
 //        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
 //        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
 //        stage.setTitle("Brain Drain");
 //        stage.setScene(scene);
 //        stage.show();
 
-        this.primaryStage=stage;
+        this.primaryStage=Stage;
 
-        MainScene mainSceneCreator=new MainScene();
+        MainSceneCreator mainSceneCreator=new MainSceneCreator();
         mainScene=mainSceneCreator.createScene();
 
-//        MovieSceneCreator movieSceneCreator=new MovieSceneCreator();
-//        movieScene=movieSceneCreator.createScene();
+        TriviaSceneCreator triviaSceneCreator=new TriviaSceneCreator();
+        triviaScene=triviaSceneCreator.createScene();
 
         primaryStage.setTitle("Brain Drain");
         primaryStage.setScene(mainScene);
